@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * 相当于一个html中的js controller web中的servlet struts2中的action
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +29,19 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        /** one is shown data part
+         *1:get needed data
+         *2:convert data
+         *3:set data to component
+         */
+
+        /**another part is event process
+         *1:collect args
+         *2:organize args
+         *3:invoke service api , and get return value
+         *4:according to vaule, select next view
+         */
     }
 
     @Override
