@@ -1,5 +1,8 @@
 <!--this xml is aimed to solving thi i18n problem-->
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">this is the fist page</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">this is the second page</string>
+    <string name="btn_to_one">back to last page</string>
+    <string name="btn_to_second">back to the second page</string>
 </resources>
