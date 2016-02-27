@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -27,6 +28,10 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        String aa = this.getIntent().getExtras().getString("text");
+        System.err.println(R.id.textView);
+        TextView myLabel = (TextView) this.findViewById(R.id.text_val);
+        myLabel.setText(aa);
         Button btnToOne = (Button) this.findViewById(R.id.btn_to_one);
         btnToOne.setOnClickListener(new View.OnClickListener() {
             @Override
