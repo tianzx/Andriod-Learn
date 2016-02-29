@@ -1,8 +1,1 @@
-<!--this xml is aimed to solving thi i18n problem-->
-<resources>
-    <string name="app_name">梓轩的应用</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_main2">this is the second page</string>
-    <string name="btn_to_one">Back to first page</string>
-    <string name="btn_to_second">Go to the second page</string>
-</resources>
+<resources></resources>

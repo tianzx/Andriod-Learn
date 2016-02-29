@@ -22,14 +22,14 @@ import android.widget.TextView;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private LinearLayout layout1;
-    private LinearLayout layout11;
-    private LinearLayout layout12;
-
-    private TextView tv1;
-    private TextView tv2;
-    private TextView tv3;
-    private TextView tv4;
+//    private LinearLayout layout1;
+//    private LinearLayout layout11;
+//    private LinearLayout layout12;
+//
+//    private TextView tv1;
+//    private TextView tv2;
+//    private TextView tv3;
+//    private TextView tv4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,34 +103,35 @@ public class MainActivity extends AppCompatActivity {
          * 3.add component to viewGroup,and set viewGroup to Activity
          */
 
-        layout1 = new LinearLayout(this);
-        layout1.setOrientation(LinearLayout.VERTICAL);
-        layout11 = new LinearLayout(this);
-        layout11.setOrientation(LinearLayout.HORIZONTAL);
-        layout12 = new LinearLayout(this);
-        tv1 = new TextView(this);
-        tv1.setText(this.getText(R.string.app_name));
-        tv2 = new TextView(this);
-        tv2.setText("tianzx v5");
-        tv2.setText("i am feeling andriod's beauty");
-        tv2.setWidth(100);
-        tv2.setGravity(Gravity.CENTER_HORIZONTAL);
-
-        tv3 = new TextView(this);
-        tv3.setText("tianzx indeed v5");
-        tv4 = new TextView(this);
-        tv4.setText("learn andriod");
-        tv4.setWidth(100);
-        tv4.setGravity(Gravity.CENTER_HORIZONTAL);
-        layout11.addView(tv1);
-        layout11.addView(tv2);
-        layout12.addView(tv3);
-        layout12.addView(tv4);
-
-        layout1.addView(layout11);
-        layout1.addView(layout12);
-
-        this.setContentView(layout1);
+//        layout1 = new LinearLayout(this);
+//        layout1.setOrientation(LinearLayout.VERTICAL);
+//        layout11 = new LinearLayout(this);
+//        layout11.setOrientation(LinearLayout.HORIZONTAL);
+//        layout12 = new LinearLayout(this);
+//        tv1 = new TextView(this);
+//        tv1.setText(this.getText(R.string.app_name));
+//        tv2 = new TextView(this);
+//        tv2.setText("tianzx v5");
+//        tv2.setText("i am feeling andriod's beauty");
+//        tv2.setWidth(100);
+//        tv2.setGravity(Gravity.CENTER_HORIZONTAL);
+//
+//        tv3 = new TextView(this);
+//        tv3.setText("tianzx indeed v5");
+//        tv4 = new TextView(this);
+//        tv4.setText("learn andriod");
+//        tv4.setWidth(100);
+//        tv4.setGravity(Gravity.CENTER_HORIZONTAL);
+//        layout11.addView(tv1);
+//        layout11.addView(tv2);
+//        layout12.addView(tv3);
+//        layout12.addView(tv4);
+//
+//        layout1.addView(layout11);
+//        layout1.addView(layout12);
+//
+//        this.setContentView(layout1);
+        
     }
 
     @Override
