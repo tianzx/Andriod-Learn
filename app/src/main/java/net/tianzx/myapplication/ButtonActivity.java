@@ -32,6 +32,7 @@ public class ButtonActivity extends AppCompatActivity {
             super.handleMessage(msg);
             num++;
             Log.i("tianzx","now handle"+num);
+
         }
     };
 
