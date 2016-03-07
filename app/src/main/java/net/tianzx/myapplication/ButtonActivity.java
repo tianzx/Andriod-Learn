@@ -40,7 +40,6 @@ public class ButtonActivity extends AppCompatActivity {
         public void run() {
             Message msg = h.obtainMessage();
             h.sendMessage(msg);
-
             h.postDelayed(r,1000L);
         }
     };
