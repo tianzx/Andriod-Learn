@@ -7,4 +7,6 @@
     <string name="btn_to_second">btn 测试</string>
     <string name="my_text">我的文本资源</string>
     <string name="upload">上传文件中</string>
+    <string name="start">开始</string>
+    <string name="stop">结束</string>
 </resources>
