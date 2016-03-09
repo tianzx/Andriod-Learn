@@ -118,10 +118,10 @@ public class ButtonActivity extends AppCompatActivity {
 
     public void sendService(View v) {
         Intent intent = new Intent();
-        intent.setClass(this, MyBoundService.class);
-//        this.startService(intent);
-        this.bindService(intent,conn,this.BIND_AUTO_CREATE);
-        String str = mybs.method1(3, 5);
-        Toast.makeText(this,"str = "+str,Toast.LENGTH_LONG).show();
+        intent.setClass(this, MyIntentService.class);
+        this.startService(intent);
+//        this.bindService(intent,conn,this.BIND_AUTO_CREATE);
+//        String str = mybs.method1(3, 5);
+//        Toast.makeText(this,"str = "+str,Toast.LENGTH_LONG).show();
     }
 }
