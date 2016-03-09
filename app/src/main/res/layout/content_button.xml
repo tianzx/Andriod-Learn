@@ -46,6 +46,14 @@
         android:id="@+id/btn3"
         android:onClick="sendMsg"
         android:layout_below="@+id/checkBox" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_service"
+        android:textColor="@color/my_blue"
+        android:id="@+id/btn4"
+        android:onClick="sendService"
+        android:layout_below="@+id/btn3" />
 
     <EditText
         android:layout_width="fill_parent"

@@ -1,13 +1,18 @@
 package net.tianzx.myapplication;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.IBinder;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ButtonActivity extends AppCompatActivity {
 
@@ -17,6 +22,7 @@ public class ButtonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_button);
         Button button = (Button) this.findViewById(R.id.btn);
 //        button.setOnClickListener(new MyBtnListener());
+        Toast.makeText(this, "hi,toast", Toast.LENGTH_LONG).show();
     }
 
     //    class MyBtnListener implements View.OnClickListener {
@@ -57,6 +63,10 @@ public class ButtonActivity extends AppCompatActivity {
 //            h.postDelayed(r,1000L);
 //        }
 //    };
+    /**
+     * First start handlerThread
+     * Second receive msg
+     */
     HandlerThread ht = new HandlerThread("Handler Thread");
     Handler h = null;
 
@@ -90,5 +100,28 @@ public class ButtonActivity extends AppCompatActivity {
         Message msg = h.obtainMessage();
         msg.obj = "now is msg ==" +num;
         msg.sendToTarget();
+    }
+
+    private MyBoundService mybs = null;
+    private ServiceConnection conn = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder iBinder) {
+            MyBoundService.MyBinder binder = (MyBoundService.MyBinder) iBinder;
+            mybs = binder.getService();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
+    public void sendService(View v) {
+        Intent intent = new Intent();
+        intent.setClass(this, MyBoundService.class);
+//        this.startService(intent);
+        this.bindService(intent,conn,this.BIND_AUTO_CREATE);
+        String str = mybs.method1(3, 5);
+        Toast.makeText(this,"str = "+str,Toast.LENGTH_LONG).show();
     }
 }
