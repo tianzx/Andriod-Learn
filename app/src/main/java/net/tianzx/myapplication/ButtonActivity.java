@@ -124,4 +124,12 @@ public class ButtonActivity extends AppCompatActivity {
 //        String str = mybs.method1(3, 5);
 //        Toast.makeText(this,"str = "+str,Toast.LENGTH_LONG).show();
     }
+
+    public void sendBroadcast(View v){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_EDIT);
+        intent.putExtra("param1","参数1");
+
+        this.sendBroadcast(intent);
+    }
 }

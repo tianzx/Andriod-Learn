@@ -49,6 +49,12 @@
         <service
             android:name=".MyIntentService"
             android:exported="false"></service>
+
+        <receiver android:name=".MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"></action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -54,6 +54,14 @@
         android:id="@+id/btn4"
         android:onClick="sendService"
         android:layout_below="@+id/btn3" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/broad_service"
+        android:textColor="@color/my_blue"
+        android:id="@+id/btn5"
+        android:onClick="sendBroadcast"
+        android:layout_below="@+id/btn4" />
 
     <EditText
         android:layout_width="fill_parent"
