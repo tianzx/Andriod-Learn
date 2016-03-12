@@ -1,5 +1,6 @@
 package net.tianzx.myapplication;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -12,7 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class ButtonActivity extends AppCompatActivity {
 
@@ -88,17 +95,18 @@ public class ButtonActivity extends AppCompatActivity {
         };
 
 
-
     }
 
     public void stop(View v) {
 
     }
+
     int num = 0;
-    public void sendMsg(View v){
+
+    public void sendMsg(View v) {
         //send message
         Message msg = h.obtainMessage();
-        msg.obj = "now is msg ==" +num;
+        msg.obj = "now is msg ==" + num;
         msg.sendToTarget();
     }
 
@@ -125,11 +133,47 @@ public class ButtonActivity extends AppCompatActivity {
 //        Toast.makeText(this,"str = "+str,Toast.LENGTH_LONG).show();
     }
 
-    public void sendBroadcast(View v){
+    public void sendBroadcast(View v) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_EDIT);
-        intent.putExtra("param1","参数1");
+        intent.putExtra("param1", "参数1");
 
         this.sendBroadcast(intent);
+    }
+
+    public void saveData(View v) {
+        EditText keyComp = (EditText) this.findViewById(R.id.mykey);
+        EditText valueComp = (EditText) this.findViewById(R.id.myvalue);
+
+        String key = keyComp.getText().toString();
+        String value = valueComp.getText().toString();
+        FileOutputStream fout = null;
+        ObjectOutputStream oout = null;
+        try {
+            fout = this.openFileOutput("MyTxt.txt", Activity.MODE_PRIVATE);
+            oout = new ObjectOutputStream(fout);
+            oout.writeChars(key+"-"+value+" , ");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                fout.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                oout.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            ;
+        }
+
+    }
+
+    public void getData(View v) {
+
     }
 }

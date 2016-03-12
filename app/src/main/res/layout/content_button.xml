@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -68,10 +68,21 @@
         android:layout_height="wrap_content"
         android:textColor="?android:textColorSecondary"
         android:text="hello"
+        android:id="@+id/mykey"
         android:layout_below="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp" />
+        android:layout_marginTop="25dp" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?android:textColorSecondary"
+        android:text="tianzx"
+        android:id="@+id/myvalue"
+        android:layout_alignBottom="@+id/btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="41dp" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -81,4 +92,5 @@
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:layout_below="@+id/btn" />
+
 </RelativeLayout><!-- 相当于一个html的静态页面 view web 中的jsp-->
