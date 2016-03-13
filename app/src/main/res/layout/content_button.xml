@@ -79,10 +79,10 @@
         android:textColor="?android:textColorSecondary"
         android:text="tianzx"
         android:id="@+id/myvalue"
-        android:layout_alignBottom="@+id/btn"
+        android:layout_below="@+id/mykey"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="41dp" />
+        android:layout_marginTop="33dp" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -92,5 +92,17 @@
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:layout_below="@+id/btn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/myvalue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_alignRight="@+id/btn3"
+        android:layout_alignEnd="@+id/btn3" />
 
 </RelativeLayout><!-- 相当于一个html的静态页面 view web 中的jsp-->
