@@ -26,7 +26,7 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LifeActivity" />
-        <activity android:name=".ButtonActivity">
+        <activity android:name=".SongsAddActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,23 +48,29 @@
             android:exported="true" />
         <service
             android:name=".MyIntentService"
-            android:exported="false"></service>
+            android:exported="false" />
 
         <receiver android:name=".MyReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.EDIT"></action>
+                <action android:name="android.intent.action.EDIT" />
             </intent-filter>
         </receiver>
         <receiver android:name=".MyReceiver2">
             <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"></action>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
             </intent-filter>
         </receiver>
-        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".SQLActivity"
+            ></activity>
     </application>
 
 </manifest>

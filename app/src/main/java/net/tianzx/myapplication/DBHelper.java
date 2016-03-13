@@ -23,5 +23,16 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        String sql = "drop table tb1_songs";
+        db.execSQL(sql);
+
+        sql = "create table tb1_songs (uuid varchar(20) , name varchar(20),savePath varchar(200)";
+        db.execSQL(sql);
+    }
+
+    @Override
+    public void onOpen(SQLiteDatabase  db) {
+        super.onOpen(db);
+
     }
 }

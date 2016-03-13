@@ -12,4 +12,9 @@
     <string name="sendmsg">发送消息</string>
     <string name="send_service">启动服务</string>
     <string name="broad_service">启动广播</string>
+    <string name="add_music">新增歌曲</string>
+    <string name="uuid_music">歌曲编号</string>
+    <string name="name_music">歌曲名称</string>
+    <string name="save_path_music">保存路径</string>
+    <string name="btn_add">保存</string>
 </resources>
